@@ -1,5 +1,18 @@
 # I'm using this to store random related files
 writings
+
 # Don't want to commit binary files
 *.docx
 *.doc
+
+# Ignore other latex files from my computer
+*.log
+*.out
+*.toc
+*.aux
+*.bbl
+*.blg
+*.synctex.gz
+
+# Ignore mac specific files
+*/.DB_Store
