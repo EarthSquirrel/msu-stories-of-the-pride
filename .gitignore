@@ -1,0 +1,5 @@
+# I'm using this to store random related files
+writings
+# Don't want to commit binary files
+*.docx
+*.doc
