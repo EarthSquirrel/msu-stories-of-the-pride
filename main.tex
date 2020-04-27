@@ -1,0 +1,41 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{hyperref}
+
+\usepackage[margin=1in]{geometry}
+
+\usepackage{color}
+\newcommand{\payAttention}[3]{{[[\color{#1}{\textbf{#2: }}\color{blue}{#3}]]}}
+%\renewcommand{\payAttention}[3]{} %% to hide!
+\newcommand{\todo}[1]{\payAttention{red}{TODO}{#1}}
+\newcommand{\xSays}[3]{\payAttention{#1}{#2 Says}{#3}}
+
+\graphicspath{{./}{figs/}}
+\newcommand{\figref}[1]{Figure~\ref{fig:#1}}
+
+
+\title{MSU Stories of the Pride}
+\author{}
+\date{}
+
+\begin{document}
+
+\maketitle 
+
+\section*{LGBTQ+ Identities}
+\todo{Add information about different identities here}
+
+\section*{First Hand Stories}
+\todo{Add stories here}
+
+\pagebreak
+ 
+ {
+ 	\bibliographystyle{acm}
+ 	\bibliography{bibliography}
+ 	
+ }
+ 
+\end{document}
