@@ -14,5 +14,14 @@ writings
 *.blg
 *.synctex.gz
 
+# Ignore other latex files from my computer
+*.log
+*.out
+*.toc
+*.aux
+*.bbl
+*.blg
+*.synctex.gz
+
 # Ignore mac specific files
 */.DB_Store
