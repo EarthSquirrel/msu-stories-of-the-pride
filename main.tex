@@ -1,10 +1,12 @@
-\documentclass[a4paper,12pt]{article}
-\usepackage{graphicx}
-\usepackage{amsmath}
-\usepackage{amssymb}
-\usepackage{hyperref}
-
-\usepackage[margin=1in]{geometry}
+% 
+%https://www.overleaf.com/latex/templates/book-template-using-the-classicthesis-package/kkbxhcwrmdgk
+% book example for classicthesis.sty
+\documentclass[12pt,a5paper,footinclude=true,headinclude=true]{scrbook} % KOMA-Script book
+\usepackage[T1]{fontenc}                
+%\usepackage{lipsum}
+\usepackage[linedheaders,parts,pdfspacing]{classicthesis} % ,manychapters
+%\usepackage[osf]{libertine}
+\usepackage{amsthm}
 
 \usepackage{color}
 \newcommand{\payAttention}[3]{{[[\color{#1}{\textbf{#2: }}\color{blue}{#3}]]}}
@@ -12,38 +14,40 @@
 \newcommand{\todo}[1]{\payAttention{red}{TODO}{#1}}
 \newcommand{\xSays}[3]{\payAttention{#1}{#2 Says}{#3}}
 
-\graphicspath{{./}{figs/}}
-\newcommand{\figref}[1]{Figure~\ref{fig:#1}}
-
-
 \title{MSU Stories of the Pride}
 \author{}
 \date{}
 
+
 \begin{document}
+	\maketitle
+	
+	\tableofcontents 
+	
+	%	\automark[section]{chapter}
+	%	
+	%\renewcommand{\chaptermark}[1]{\markboth{\spacedlowsmallcaps{#1}}{\spacedlowsmallcaps{#1}}}
+	%	\renewcommand{\sectionmark}[1]{\markright{\thesection\enspace\spacedlowsmallcaps{#1}}}
+	
+	% use \cleardoublepage here to avoid problems with pdfbookmark
+	%\cleardoublepage\part{Test Part}
+	\chapter{LGBTQ+ Identities}
+	\todo{Add information about different identities and flags here}
+	\input{identities/identities}
+	
+	\chapter{Academic Year: 2019-2020}
+	\todo{Add stories here}
+	\input{stories/msu-2019-2020/stories}
+	
+	\chapter*{Acknowledgments}
+	\input{acknowledgments}
+	
+	
+	{
+		\bibliographystyle{acm}
+		\bibliography{bibliography}
+		
+	}
 
-\maketitle 
 
-\section*{LGBTQ+ Identities}
-\todo{Add information about different identities and flags here}
-\input{identities/identities}
-
-
-\pagebreak
-\section*{First Hand Stories}
-\todo{Add stories here}
-\input{stories/msu-2019-2020/stories}
-
-\pagebreak
-\section*{Acknowledgments}
-\input{acknowledgments}
-
-\pagebreak
- 
- {
- 	\bibliographystyle{acm}
- 	\bibliography{bibliography}
- 	
- }
- 
 \end{document}
