@@ -6,3 +6,5 @@ look back and see how their community has changed over time. The stories are
 not required to meet any standards; there are no assigned topics nor length 
 limit. Participants wrote about what is meaningful to them and their personal 
 experiences.  
+\\ 
+License: cc-by-4.0
