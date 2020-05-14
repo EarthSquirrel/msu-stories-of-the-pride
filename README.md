@@ -1,5 +1,6 @@
 # MSU Stories of the Pride
 **To view download main.pdf**
+
 The purpose of this document is to capture stories of LGBTQ+ individuals at 
 Montana State University (MSU). It is meant to serve as a time capsule of sorts 
 for LGBTQ+ students and the community at MSU. One hope is future students can 
