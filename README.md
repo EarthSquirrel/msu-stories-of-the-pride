@@ -9,4 +9,9 @@ experiences. If you wish to read a current copy of our stories with no assembly
 required, feel free to download main.pdf (my logic behind committing the pdf 
 file).
 
+## Submit a Story
+To submit a story, follow [this link](https://forms.gle/XzMt5o57KogHqStdA) and
+fill out the form. Feel free to include as little or as much information as
+you feel comfortable.
+
 Licensed under cc-by-4.0
