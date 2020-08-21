@@ -17,13 +17,15 @@
     %\section*{\uppercase{\textbf{\anonVar{#1}}}: #2}
     % #1 Name, #2 Story title
     \section*{\uppercase{\textbf{#1}}: #2}
+    
     #3 \\  % Story
+
+    % TODO: Why does surrounding \testEmtpy in \textit indent things?
     % Test if #4 is empty, if so, leave blank, if not format pronouns
-    \testEmpty{#4}{}{\textit{-#4}}
+    \textit{\testEmpty{#4}{}{-#4}}
     
     % #5 Major, #6 Year in school
-    % If major is blank, leave blank and exclude ,
-    \textit{\testEmpty{#5}{}{-#5, }}
-    %\textit{-#5, #6}
+    % If major is there add , only if year in school is also there
+    \textit{\testEmpty{#5}{}{-#5\testEmpty{#6}{}{, #6}}}
 }
 
