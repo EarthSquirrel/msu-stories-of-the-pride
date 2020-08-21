@@ -11,9 +11,8 @@
 \def \anon#1{ \ifempty{#1} Anonomous \else #1 \fi }
     \newcommand{\anonVar}[1]{\anon{#1}}
 \newcommand{\story}[6]{    
-    \anonVar{#1}
-
-    \section*{\uppercase{\textbf{#1}}: #2}
+    \uppercase{\textbf{\anonVar{#1}}}
+    %\section*{\uppercase{\textbf{\anonVar{#1}}}: #2}
     #3 \\
     \textit{-#4} \\
     \textit{-#5, #6}
