@@ -15,10 +15,15 @@
     % It doesn't work once it gets into the section portion...
     %\uppercase{\textbf{\anonVar{#1}}}
     %\section*{\uppercase{\textbf{\anonVar{#1}}}: #2}
+    % #1 Name, #2 Story title
     \section*{\uppercase{\textbf{#1}}: #2}
-    #3 \\
+    #3 \\  % Story
     % Test if #4 is empty, if so, leave blank, if not format pronouns
-    \testEmpty{#4}{}{\textit{-#4}\\}
-    \textit{-#5, #6}
+    \testEmpty{#4}{}{\textit{-#4}}
+    
+    % #5 Major, #6 Year in school
+    % If major is blank, leave blank and exclude ,
+    \textit{\testEmpty{#5}{}{-#5, }}
+    %\textit{-#5, #6}
 }
 
