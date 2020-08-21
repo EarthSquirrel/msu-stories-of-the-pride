@@ -1,22 +1,23 @@
 % Make the command for organizing stories
 
+% Test if something is empty, if so do #2 else do #3
 \def \ifempty#1{\def\temp{#1} \ifx\temp\empty }
+\newcommand{\testEmpty}[3]{\ifempty{#1} #2 \else #3 \fi}
 
-%\mymacro{something} % prints "not empty"
-%\mymacro{}          % prints "empty"
-
+% These are still being tested and tried to get working
+\def \anon#1{ \ifempty{#1} Anonomous \else #1 \fi }
+\newcommand{\anonVar}[1]{\anon{#1}}
 
 % Used in msu-2019-2020
 % \story{name}{title}{story}{pronouns}{major}{year}
-\def \anon#1{ \ifempty{#1} Anonomous \else #1 \fi }
-    \newcommand{\anonVar}[1]{\anon{#1}}
-\newcommand{\testEmpty}[3]{\ifempty{#1} #2 \else #3 \fi}
 \newcommand{\story}[6]{    
     % It doesn't work once it gets into the section portion...
     %\uppercase{\textbf{\anonVar{#1}}}
     %\section*{\uppercase{\textbf{\anonVar{#1}}}: #2}
     % #1 Name, #2 Story title
     \section*{\uppercase{\textbf{#1}}: #2}
+    %\section*{\testEmpty{#1}{
+    %    \textbf{ANONOMOUS}}{\uppercase{\textbf{#1}}}: #2}
     
     #3 %\\  % Story
 
