@@ -10,11 +10,15 @@
 % \story{name}{title}{story}{pronouns}{major}{year}
 \def \anon#1{ \ifempty{#1} Anonomous \else #1 \fi }
     \newcommand{\anonVar}[1]{\anon{#1}}
+\newcommand{\testEmpty}[3]{\ifempty{#1} #2 \else #3 \fi}
 \newcommand{\story}[6]{    
-    \uppercase{\textbf{\anonVar{#1}}}
+    % It doesn't work once it gets into the section portion...
+    %\uppercase{\textbf{\anonVar{#1}}}
     %\section*{\uppercase{\textbf{\anonVar{#1}}}: #2}
+    \section*{\uppercase{\textbf{#1}}: #2}
     #3 \\
-    \textit{-#4} \\
+    % Test if #4 is empty, if so, leave blank, if not format pronouns
+    \testEmpty{#4}{}{\textit{-#4}\\}
     \textit{-#5, #6}
 }
 
