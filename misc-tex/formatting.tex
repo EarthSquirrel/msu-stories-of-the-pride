@@ -1,18 +1,8 @@
 % Make the command for organizing stories
 
-\def \ifempty#1{\def\temp{#1} \ifx\temp\empty }
-
-%\mymacro{something} % prints "not empty"
-%\mymacro{}          % prints "empty"
-
-
 % Used in msu-2019-2020
 % \story{name}{title}{story}{pronouns}{major}{year}
-\def \anon#1{ \ifempty{#1} Anonomous \else #1 \fi }
 \newcommand{\story}[6]{    
-    \anon{#1}
-    
-    %\newcommand{\anonVar}{\anon{#1}}
     \section*{\uppercase{\textbf{#1}}: #2}
     #3 \\
     \textit{-#4} \\
