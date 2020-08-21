@@ -2,9 +2,12 @@
 %https://www.overleaf.com/latex/templates/book-template-using-the-classicthesis-package/kkbxhcwrmdgk
 % book example for classicthesis.sty
 \documentclass[12pt,letterpaper,footinclude=true,headinclude=true]{book} % KOMA-Script book
-\usepackage[T1]{fontenc}                
-%\usepackage{lipsum}
 \usepackage[linedheaders,parts,pdfspacing]{classicthesis} % ,manychapters
+\usepackage[T1]{fontenc}                
+\usepackage{graphicx}  % Include images
+\usepackage{xcolor}
+\usepackage{svg}
+%\usepackage{lipsum}
 %\usepackage[osf]{libertine}
 \usepackage{amsthm}
 \usepackage{fullpage} % Thank you Anne!!!!!!
@@ -16,6 +19,7 @@
 
 % The formatting commands for the stories
 \input{misc-tex/formatting}
+\input{misc-tex/flags}  % get flag images easier
 
 \title{MSU Stories of the Pride}
 \author{LGBTQ+ People of MSU}
@@ -37,8 +41,9 @@
 	
 	\chapter*{Preface}
 	\addcontentsline{toc}{chapter}{Preface}
-	\input{misc-tex/preface}
-	
+	\lesbianflagstory
+    \input{misc-tex/preface}
+
 	\chapter{LGBTQ+ Identities}
 	\input{identities/identities}
 	
