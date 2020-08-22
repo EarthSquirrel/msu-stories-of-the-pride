@@ -5,8 +5,28 @@
 \newcommand{\testEmpty}[3]{\ifempty{#1} #2 \else #3 \fi}
 
 % Used in msu-2019-2020
+% \story{name}{title}{story}{pronouns}{major}{year}{flag commands}
+\newcommand{\story}[7]{    
+    % #1 Name, #2 Story title
+    \section*{\uppercase{\textbf{#1}}: #2}
+    \begin{centering} 
+    % Only do a new line if there were flags to write out
+    #7 \testEmpty{#7}{}{\\}
+    \end{centering}
+
+    #3 %\\  % Story
+
+    % Why does surrounding \testEmtpy in \textit indent things?
+    % Test if #4 is empty, if so, leave blank, if not format pronouns
+    \textit{\testEmpty{#4}{}{-#4}}
+    
+    % #5 Major, #6 Year in school
+    % If major is there add , only if year in school is also there
+    \textit{\testEmpty{#5}{}{-#5\testEmpty{#6}{}{, #6}}}
+}
+
 % \story{name}{title}{story}{pronouns}{major}{year}
-\newcommand{\story}[6]{    
+\newcommand{\storyonly}[6]{    
     % #1 Name, #2 Story title
     \section*{\uppercase{\textbf{#1}}: #2}
     
@@ -20,4 +40,5 @@
     % If major is there add , only if year in school is also there
     \textit{\testEmpty{#5}{}{-#5\testEmpty{#6}{}{, #6}}}
 }
+
 
