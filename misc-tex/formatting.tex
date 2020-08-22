@@ -7,11 +7,14 @@
 
 \newcommand{\story}[7]{
     \section*{\uppercase{\textbf{#1}}: #2}
-    \begin{centering} 
     % Only do a new line if there were flags to write out
-    #7 \testEmpty{#7}{}{\\}
-    \end{centering}
-    #3 \\
+    \testEmpty{#7}{}{
+        % not sure what \wd0 does, but it works!
+        \begin{wrapfigure}{l}{\wd0}
+            #7
+        \end{wrapfigure}
+    }
+    #3 \\  % Story
     \textit{\testEmpty{#4}{}{-#4}} \\
     % If major is there add , only if year in school is also there
     \textit{\testEmpty{#5}{}{-#5\testEmpty{#6}{}{, #6}}}
@@ -63,5 +66,3 @@
     % If major is there add , only if year in school is also there
     \textit{\testEmpty{#5}{}{-#5\testEmpty{#6}{}{, #6}}}
 }
-
-
