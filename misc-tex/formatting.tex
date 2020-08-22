@@ -3,19 +3,22 @@
 \newcommand{\testEmpty}[3]{\ifempty{#1} #2 \else #3 \fi}
 
 % Make the command for organizing stories
-% \story{name}{title}{story}{pronouns}{major}{year}
-
+% \story{name}{title}{story}{pronouns}{major}{year}{flag commands}
 \newcommand{\story}[7]{
+    % 1: Name 2: Title
     \section*{\uppercase{\textbf{#1}}: #2}
     % Only do a new line if there were flags to write out
     \testEmpty{#7}{}{
         % not sure what \wd0 does, but it works!
+        % wrapfigure wraps the text around the image
         \begin{wrapfigure}{l}{\wd0}
-            #7
+            #7  % List of flag commands for images
         \end{wrapfigure}
     }
     #3 \\  % Story
+    % 4: pronouns Only add - if there are pronouns present
     \textit{\testEmpty{#4}{}{-#4}} \\
+    % 5: major 6: year in school
     % If major is there add , only if year in school is also there
     \textit{\testEmpty{#5}{}{-#5\testEmpty{#6}{}{, #6}}}
 }
