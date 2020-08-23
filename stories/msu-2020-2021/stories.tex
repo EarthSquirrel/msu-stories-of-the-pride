@@ -1,5 +1,12 @@
 % include command for layout
 % \story{name}{title}{story}{pronouns}{major}{year}
 
+% file path variable, if path to stories changes, only must change here
+% do NOT put ending / in file path because it'll cause problems if file starts
+% with a letter
+% Used \def not \newcommand, because want it to overwrite old versions and only
+% specific to this file
+\def\filePath{stories/msu-2020-2021}
+
 % Add the stories
-\input{stories/msu-2020-2021/0001}
+\input{\filePath/0001}
