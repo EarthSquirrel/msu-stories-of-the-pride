@@ -27,7 +27,10 @@
 % {Section title}{flag path}{citation key}{flag figure text}{about the identity}
 \newcommand{\rIdentity}[5]{
     \section*{#1}
-    
+    \begin{wrapfigure}{#2}{0.33\textwidth}
+        \includegraphics[width=0.31\textwidth]{#2}
+        \caption{#4 \\ \cite{#3}}
+    \end{wrapfigure}
     #5
 }
 
