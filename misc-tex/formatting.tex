@@ -23,7 +23,21 @@
     \textit{\testEmpty{#5}{}{-#5\testEmpty{#6}{}{, #6}}}
 }
 
+% command for an identity with the flag on the right side of the page
+% {Section title}{flag path}{citation key}{flag figure text}{about the identity}
+\newcommand{\rIdentity}[5]{
+    \section*{#1}
+    
+    #5
+}
 
+% command for an identity with the flag on the left side of the page
+% {Section title}{flag path}{citation key}{flag figure text}{about the identity}
+\newcommand{\lIdentity}[5]{
+    \section*{#1}
+    
+    #5
+}
 
 
 % Make the command for organizing stories
