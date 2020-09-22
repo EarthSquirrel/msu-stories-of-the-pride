@@ -18,9 +18,9 @@ you feel comfortable.
 ## Give Input on an Identity
 Ideally, the description of the different identities will be written by members
 of the LGBTQ+ community at MSU. If you'd like to give input on what you think
-the different identities mean, follow 
+the different identities mean to you, follow 
 [this link](https://forms.gle/inxoKwhnFsikgUjT6). Feel free to give input on as
-many as you'd like and if you want to talk about one that is missing, put it
+many as you'd like. If you want to talk about one that is missing, put it
 under other and it'll get added (hopefully in a relatively timely manner).
 
 
